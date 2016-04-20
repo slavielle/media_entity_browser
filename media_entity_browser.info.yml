@@ -1,7 +1,7 @@
 name: Media Entity Browser
 type: module
 description: 'This module provides an Entity Browser for Media Entity.'
-package: aGov
+package: Media
 core: '8.x'
 
 dependencies:
