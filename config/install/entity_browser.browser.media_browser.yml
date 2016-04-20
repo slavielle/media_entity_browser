@@ -10,8 +10,6 @@ display: iframe
 display_configuration:
   widget_ids:
     3bc4ec79-86e9-4e60-a2ff-47526c6550f9: 'Add Existing'
-    e5f8a853-3269-4f63-a7a9-fc9c4b7e7f5e: 'Upload Image'
-    74acb511-c511-4e12-a1c8-9c917efe3be2: 'Add Video'
   width: '100%'
   height: '768'
   link_text: 'Select items'
@@ -31,19 +29,3 @@ widgets:
     weight: 1
     label: 'Add Existing'
     id: view
-  e5f8a853-3269-4f63-a7a9-fc9c4b7e7f5e:
-    settings:
-      entity_type: media
-      bundle: image
-    uuid: e5f8a853-3269-4f63-a7a9-fc9c4b7e7f5e
-    weight: 2
-    label: 'Upload Image'
-    id: entity_form
-  74acb511-c511-4e12-a1c8-9c917efe3be2:
-    settings:
-      entity_type: media
-      bundle: video
-    uuid: 74acb511-c511-4e12-a1c8-9c917efe3be2
-    weight: 3
-    label: 'Add Video'
-    id: entity_form
