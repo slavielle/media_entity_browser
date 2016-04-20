@@ -1,5 +1,5 @@
 /**
- * @file media_entity_browser.view.css
+ * @media-entity media_entity_browser.view.css
  */
 
 .view-media-entity-browser .pager {
@@ -59,7 +59,7 @@
 }
 
 .view-media-entity-browser .views-row.checked:after {
-  background-size: 80px 00px;
+  background-size: 80px 80px;
 }
 
 .media-info {
@@ -96,4 +96,19 @@
 
 .media-info--Twitter {
   background: transparent url("../images/twitter.svg") no-repeat;
+}
+
+input[type="submit"][name="filter"] {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.media-entity-browser-actions {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  padding: 10px;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #b8b8b8;
 }
