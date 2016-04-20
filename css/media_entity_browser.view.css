@@ -16,10 +16,16 @@
   transition: .2s;
 }
 
-@media screen and (min-width:18.75em) { /* 300px */
+@media screen and (min-width:37.5em) { /* 600px */
+  .view-media-entity-browser .views-row {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media screen and (min-width:62.5em) { /* 1000px */
   .view-media-entity-browser .views-row {
     width: 33.333%;
-    float: left;
   }
 }
 
