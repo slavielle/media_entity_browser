@@ -1,0 +1,9 @@
+view:
+  css:
+    theme:
+      theme/media_entity_browser.view.css: {}
+  js:
+    theme/media_entity_browser.view.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
