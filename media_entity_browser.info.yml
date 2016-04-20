@@ -8,5 +8,7 @@ dependencies:
   - entity_browser
   - media_entity
 
+# To export this config, make sure config_devel is installed, cache is rebuilt
+# then run "drush config-devel-export media_entity_browser".
 config_devel:
   - views.view.media_entity_browser
