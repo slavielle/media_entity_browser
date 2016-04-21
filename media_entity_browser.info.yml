@@ -12,3 +12,6 @@ dependencies:
 # then run "drush config-devel-export media_entity_browser".
 config_devel:
   - views.view.media_entity_browser
+  - image.style.media_entity_browser_thumbnail
+  - entity_browser.browser.media_entity_browser
+  - embed.button.media_entity_embed
