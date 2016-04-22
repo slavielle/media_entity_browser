@@ -13,7 +13,7 @@ use Drupal\Core\Form\FormStateInterface;
 function media_entity_browser_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
   // @todo, detect entity browsers specifically using the MEB view or find
   // another way to attach the library.
-  if (strpos($form_id, 'entity_browser') === 0) {
+  if (strpos($form_id, 'entity_browser') === 0 && !empty($form['widget']['view'])) {
     $form['#attached']['library'][] = 'media_entity_browser/view';
 
     // Style the submit button.
@@ -28,8 +28,10 @@ function media_entity_browser_form_alter(&$form, FormStateInterface &$form_state
  */
 function media_entity_browser_form_entity_embed_dialog_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if ($embed_button = $form_state->get('embed_button')) {
-    // Check that we're using file_browser.
-    if ($embed_button->getTypePlugin()->getConfigurationValue('entity_browser') == 'media_entity_browser') {
+    $browser = $embed_button->getTypePlugin()->getConfigurationValue('entity_browser');
+    // Check that we're using file_browser. @todo, check the browser by the view
+    // instead of hard-coding browser IDs.
+    if (in_array($browser, ['media_browser', 'media_entity_browser'])) {
       // Override the first step of the form, if we're using media_browser.
       if ($form['actions']['save_modal']['#ajax']['callback'] == '::submitSelectStep') {
         // Add a library which handles our special "Select Media" button.
