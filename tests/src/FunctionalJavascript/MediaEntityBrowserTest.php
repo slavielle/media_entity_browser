@@ -3,7 +3,6 @@
 namespace Drupal\Tests\media_entity_browser\FunctionalJavascript;
 
 use Drupal\FunctionalJavascriptTests\JavascriptTestBase;
-use Drupal\local_testing\LocalTestingTrait;
 use Drupal\media_entity\Entity\Media;
 use Drupal\media_entity\Entity\MediaBundle;
 
@@ -13,8 +12,6 @@ use Drupal\media_entity\Entity\MediaBundle;
  * @group media_entity_browser
  */
 class MediaEntityBrowserTest extends JavascriptTestBase {
-
-  use LocalTestingTrait;
 
   /**
    * Modules to install.
