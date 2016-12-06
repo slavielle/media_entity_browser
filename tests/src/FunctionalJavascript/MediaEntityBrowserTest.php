@@ -14,6 +14,15 @@ use Drupal\media_entity\Entity\MediaBundle;
 class MediaEntityBrowserTest extends JavascriptTestBase {
 
   /**
+   * @TODO, remove schema ignores. https://www.drupal.org/node/2833289
+   *
+   * @var array
+   */
+  protected static $configSchemaCheckerExclusions = [
+    'entity_browser.browser.media_entity_browser',
+  ];
+
+  /**
    * Modules to install.
    *
    * @var array
@@ -24,8 +33,6 @@ class MediaEntityBrowserTest extends JavascriptTestBase {
     'media_entity_browser',
     'video_embed_media',
     'ctools',
-    // @todo, fix after https://www.drupal.org/node/2746203.
-    'block',
   ];
 
   /**
@@ -59,7 +66,7 @@ class MediaEntityBrowserTest extends JavascriptTestBase {
     $this->getSession()->getPage()->find('css', '.views-row')->press();
     $this->assertSession()->elementExists('css', '.views-row.checked');
 
-    $this->assertSession()->buttonExists('Select Media');
+    $this->assertSession()->buttonExists('Select entities');
   }
 
 }
