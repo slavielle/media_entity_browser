@@ -14,15 +14,6 @@ use Drupal\media_entity\Entity\MediaBundle;
 class MediaEntityBrowserTest extends JavascriptTestBase {
 
   /**
-   * @TODO, remove schema ignores. https://www.drupal.org/node/2833289
-   *
-   * @var array
-   */
-  protected static $configSchemaCheckerExclusions = [
-    'entity_browser.browser.media_entity_browser',
-  ];
-
-  /**
    * Modules to install.
    *
    * @var array
