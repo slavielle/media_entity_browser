@@ -22,7 +22,9 @@ class MediaEntityBrowserTest extends JavascriptTestBase {
    */
   public static $modules = [
     'media',
+    'inline_entity_form',
     'entity_browser',
+    'entity_browser_entity_form',
     'media_entity_browser',
     'video_embed_media',
     'ctools',
