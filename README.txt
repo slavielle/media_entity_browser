@@ -31,3 +31,4 @@ On installation the Browser isn't visible. You need to add it to an Entity Embed
 or to an Media Entity Reference Fields with the Inline Entity Form - Complex field widget.
 
 - For WYSIWYG Entity Embedding use the iFrame Browser (/admin/config/content/entity_browser/media_entity_browser).
+- For Media Entity Reference Fields use the Modal Browser (/admin/config/content/entity_browser/media_entity_browser).
