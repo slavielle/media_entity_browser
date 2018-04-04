@@ -62,7 +62,7 @@
   top: 0;
   left: 0;
   position: absolute;
-  background: transparent url("/core/misc/icons/73b355/check.svg") no-repeat center center;
+  background: transparent url("../images/check.svg") no-repeat center center;
   background-size: 0;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
