@@ -51,6 +51,7 @@ class MediaEntityBrowserTest extends JavascriptTestBase {
    */
   public function testMediaBrowser() {
     $this->drupalGet('entity-browser/iframe/media_entity_browser');
+    $this->clickLink('Choose existing image');
 
     $this->assertSession()->elementExists('css', '.view-media-entity-browser-view');
     $this->assertSession()->elementExists('css', '.image-style-media-entity-browser-thumbnail');
