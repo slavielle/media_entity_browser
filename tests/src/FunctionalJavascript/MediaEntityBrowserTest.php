@@ -4,7 +4,6 @@ namespace Drupal\Tests\media_entity_browser\FunctionalJavascript;
 
 use Drupal\FunctionalJavascriptTests\JavascriptTestBase;
 use Drupal\media\Entity\Media;
-use Drupal\media\Entity\MediaType;
 use Drupal\Tests\media\Functional\MediaFunctionalTestCreateMediaTypeTrait;
 
 /**
@@ -60,7 +59,7 @@ class MediaEntityBrowserTest extends JavascriptTestBase {
     $this->getSession()->getPage()->find('css', '.views-row')->press();
     $this->assertSession()->elementExists('css', '.views-row.checked');
 
-    $this->assertSession()->buttonExists('Select entities');
+    $this->assertSession()->buttonExists('Select media');
   }
 
 }

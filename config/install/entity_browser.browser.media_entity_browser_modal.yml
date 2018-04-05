@@ -12,7 +12,7 @@ display: modal
 display_configuration:
   width: '1070'
   height: '500'
-  link_text: 'Select entities'
+  link_text: 'Select media'
   auto_open: true
 selection_display: no_display
 selection_display_configuration: {  }
@@ -22,12 +22,12 @@ widgets:
   fc729026-c85f-4561-acd5-38d4082b69fb:
     settings:
       view: media_entity_browser
-      view_display: entity_browser_1
-      submit_text: 'Select image'
+      view_display: media_browser_all
+      submit_text: 'Select media'
       auto_select: false
     uuid: fc729026-c85f-4561-acd5-38d4082b69fb
     weight: -9
-    label: 'Choose existing image'
+    label: 'Choose existing media'
     id: view
   9769d4e4-1f9c-4313-8b01-fe8cff8aa5a1:
     settings:
