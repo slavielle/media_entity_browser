@@ -2,7 +2,7 @@
 
 namespace Drupal\Tests\media_entity_browser\FunctionalJavascript;
 
-use Drupal\FunctionalJavascriptTests\JavascriptTestBase;
+use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\media\Entity\Media;
 use Drupal\Tests\media\Functional\MediaFunctionalTestCreateMediaTypeTrait;
 
@@ -11,7 +11,7 @@ use Drupal\Tests\media\Functional\MediaFunctionalTestCreateMediaTypeTrait;
  *
  * @group media_entity_browser
  */
-class MediaEntityBrowserTest extends JavascriptTestBase {
+class MediaEntityBrowserTest extends WebDriverTestBase {
 
   use MediaFunctionalTestCreateMediaTypeTrait;
   /**
