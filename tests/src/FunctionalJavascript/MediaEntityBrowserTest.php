@@ -4,7 +4,7 @@ namespace Drupal\Tests\media_entity_browser\FunctionalJavascript;
 
 use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\media\Entity\Media;
-use Drupal\Tests\media\Functional\MediaFunctionalTestCreateMediaTypeTrait;
+use Drupal\Tests\media\Traits\MediaTypeCreationTrait;
 
 /**
  * A test for the media entity browser.
@@ -13,7 +13,7 @@ use Drupal\Tests\media\Functional\MediaFunctionalTestCreateMediaTypeTrait;
  */
 class MediaEntityBrowserTest extends WebDriverTestBase {
 
-  use MediaFunctionalTestCreateMediaTypeTrait;
+  use MediaTypeCreationTrait;
   /**
    * Modules to install.
    *
@@ -35,10 +35,10 @@ class MediaEntityBrowserTest extends WebDriverTestBase {
   public function setUp() {
     parent::setUp();
     $this->drupalLogin($this->drupalCreateUser(array_keys($this->container->get('user.permissions')->getPermissions())));
-    $this->createMediaType([
+    $this->createMediaType('video_embed_field', [
       'label' => 'Video',
       'bundle' => 'video',
-    ], 'video_embed_field');
+    ]);
 
     Media::create([
       'bundle' => 'video',

@@ -1,19 +1,19 @@
 <?php
 
-namespace Drupal\Tests\media_entity_browser\FunctionalJavascript;
+namespace Drupal\Tests\media_entity_browser_media_library\FunctionalJavascript;
 
-use Drupal\FunctionalJavascriptTests\JavascriptTestBase;
+use Drupal\FunctionalJavascriptTests\WebDriverTestBase;
 use Drupal\media\Entity\Media;
-use Drupal\Tests\media\Functional\MediaFunctionalTestCreateMediaTypeTrait;
+use Drupal\Tests\media\Traits\MediaTypeCreationTrait;
 
 /**
  * A test for the media entity browser with media library.
  *
  * @group media_entity_browser
  */
-class MediaEntityBrowserMediaLibraryTest extends JavascriptTestBase {
+class MediaEntityBrowserMediaLibraryTest extends WebDriverTestBase {
 
-  use MediaFunctionalTestCreateMediaTypeTrait;
+  use MediaTypeCreationTrait;
   /**
    * Modules to install.
    *
@@ -37,10 +37,10 @@ class MediaEntityBrowserMediaLibraryTest extends JavascriptTestBase {
   public function setUp() {
     parent::setUp();
     $this->drupalLogin($this->drupalCreateUser(array_keys($this->container->get('user.permissions')->getPermissions())));
-    $this->createMediaType([
+    $this->createMediaType('video_embed_field', [
       'label' => 'Video',
       'bundle' => 'video',
-    ], 'video_embed_field');
+    ]);
 
     Media::create([
       'bundle' => 'video',
@@ -62,7 +62,6 @@ class MediaEntityBrowserMediaLibraryTest extends JavascriptTestBase {
     $this->assertSession()->elementNotExists('css', '.js-click-to-select.checked');
     $this->getSession()->getPage()->find('css', '.js-click-to-select')->press();
     $this->assertSession()->elementExists('css', '.js-click-to-select.checked');
-    $this->assertSession()->elementExists('css', '.js-click-to-select.media-library-item--disabled');
   }
 
 }
