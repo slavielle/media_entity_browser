@@ -60,7 +60,7 @@ class MediaEntityBrowserMediaLibraryTest extends WebDriverTestBase {
     $this->assertSession()->elementExists('css', '.media-library-item__preview');
 
     $this->assertSession()->elementNotExists('css', '.js-click-to-select.checked');
-    $this->getSession()->getPage()->find('css', '.js-click-to-select')->press();
+    $this->getSession()->getPage()->find('css', '.js-click-to-select input[type=checkbox]')->press();
     $this->assertSession()->elementExists('css', '.js-click-to-select.checked');
   }
 
